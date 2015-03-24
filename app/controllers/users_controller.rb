@@ -9,7 +9,7 @@
       end
 
    def create
-        secure_params = params.require(:user).permit(:name, :email, 
+        secure_params = params.require(:user).permit(:name, :email, :reg, :vat, 
                                   :password, :password_confirmation)
         @user = User.new(secure_params)
         if @user.save

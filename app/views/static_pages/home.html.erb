@@ -14,18 +14,45 @@
         </div>
       </div>  
     <% else %>
+<%=image_tag "logoalt.jpg"%>
+<div id="this-carousel-id" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag "gallery/01.jpg" %>
+      <div class="carousel-caption">
+        <p>NearBuy Android Application</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag "gallery/02.jpg" %>
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag "gallery/03.jpg" %>
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag "gallery/0.jpg" %>
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+  </div>
+    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+</div>
       <div class="center hero-unit">
-        <h1>Welcome to the Sample App</h1>
+        <h1>Welcome to NearBuy</h1>
 
         <h2>
-          This is the home page for the
-          <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-          sample application.
+          If you are a business looking to connect with more customers quickly and easily, visit our about page or sign up with us!
         </h2>
 
         <%= link_to "Sign up now!", signup_path, 
-                                    class: "btn btn-large btn-primary" %>
+                                    class: "btn btn-large btn-danger" %>
       </div>
-
-      <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
     <% end %> 

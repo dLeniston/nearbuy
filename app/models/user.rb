@@ -8,7 +8,9 @@
       validates :email, presence: true, 
                         format: { with: VALID_EMAIL_REGEX },
                         uniqueness: { case_sensitive: false }
-
+      validates :reg, presence: true, uniqueness: true, numericality: {only_integer: true},
+                 length: { in: 5..9}
+      validates :vat, presence: true, uniqueness: true, length: { is: 10 }
       validates :password, presence: true, length: { minimum: 6 }
       validates :password_confirmation, presence: true
       has_secure_password
