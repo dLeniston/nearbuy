@@ -1,18 +1,10 @@
 <% if signed_in? %>
+<div class = "hero-unit">
+  <h1>Store Details</h1>
       <div class="row">
         <aside class="span4">
-          <section>
-            <%= render 'shared/user_info' %>
-          </section>
-          <section>
-            <%= render 'shared/micropost_form' %>
-          </section>
-        </aside>
-        <div class="span8">
-              <h3>Micropost Feed</h3>
-              <%= render 'shared/feed' %>
-        </div>
-      </div>  
+      </div> 
+</div> 
     <% else %>
 <%=image_tag "logoalt.jpg"%>
 <div id="this-carousel-id" class="carousel slide">
