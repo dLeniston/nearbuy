@@ -13,8 +13,6 @@
       end
 
    def create
-        secure_params = params.require(:user).permit(:name, :email, :reg, :vat, 
-                                  :password, :password_confirmation)
         @user = User.new(secure_params)
         if @user.save
           sign_in @user
@@ -51,5 +49,11 @@
     @user = User.find(params[:id])
     redirect_to(root_url) unless current_user?(@user)
   end
+
+        private
+        def secure_params
+          params.require(:user).permit(:name, :email, :reg, :vat, 
+                                  :password, :password_confirmation)
+        end
 
 end
