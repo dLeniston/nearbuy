@@ -5,6 +5,7 @@
 
       def show
         @user = User.find(params[:id])
+       # @stores = @user.stores
         @microposts = @user.microposts
       end
 
@@ -52,7 +53,7 @@
 
         private
         def secure_params
-          params.require(:user).permit(:name, :email, :reg, :vat, 
+          params.require(:user).permit(:name, :email, 
                                   :password, :password_confirmation)
         end
 

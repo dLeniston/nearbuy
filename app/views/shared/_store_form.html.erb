@@ -1,0 +1,31 @@
+<div class = "hero-unit">
+<%= form_for(@store) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="field">
+        <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+      <%= f.label :name, "Company Name" %>
+          <%= f.text_field :name %>
+
+          <%= f.label :address %>
+          <%= f.text_field :address %>
+          
+          <%= f.label :regno, "Registration No." %>
+          <%= f.text_field :regno %>
+
+          <%= f.label :vatno, "Vat No." %>
+          <%= f.text_field :vatno %>
+
+          <%= f.label :opening, "Opening Times" %>
+          <%= f.text_field :opening %>
+
+          <%= f.label :lat, "Latitude" %>
+          <%= f.text_field :lat %>
+
+          <%= f.label :lng, "Longitude" %>
+          <%= f.text_field :lng %>
+
+          <%= f.submit "Save Store Details", class: "btn btn-large btn-danger" %>
+        <% end %>
+    <% end %>
+	</div>
+</div>
