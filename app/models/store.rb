@@ -10,4 +10,5 @@ class Store < ActiveRecord::Base
       validates :opening, presence: true, length: {maximum: 200}
       validates :lat, presence: true
       validates :long, presence: true
+      default_scope order: 'microposts.created_at DESC'
 end

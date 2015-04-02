@@ -1,8 +1,7 @@
 <div class = "hero-unit">
-<%= form_for(@store) do |f| %>
+<%= form_for @store = Store.new do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       <div class="field">
-        <%= f.text_area :content, placeholder: "Compose new micropost..." %>
       <%= f.label :name, "Company Name" %>
           <%= f.text_field :name %>
 
@@ -26,6 +25,5 @@
 
           <%= f.submit "Save Store Details", class: "btn btn-large btn-danger" %>
         <% end %>
-    <% end %>
 	</div>
 </div>
