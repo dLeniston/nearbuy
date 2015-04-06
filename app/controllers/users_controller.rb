@@ -6,7 +6,7 @@
       def show
         @user = User.find(params[:id])
         @microposts = @user.microposts
-        #@stores = @user.stores
+        @store = @user.store
       end
 
        def new

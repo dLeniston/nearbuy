@@ -13,7 +13,7 @@
       has_secure_password
       validates :password, length: { minimum: 6 }, allow_blank: true
       has_many :microposts, dependent: :destroy
-      has_one :stores, dependent: :destroy
+      has_one :store, dependent: :destroy
 
     def feed
        Micropost.where("user_id = ?", id)

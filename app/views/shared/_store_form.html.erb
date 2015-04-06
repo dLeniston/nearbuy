@@ -1,5 +1,5 @@
 <div class = "hero-unit">
-<%= form_for @store = Store.new do |f| %>
+<%= form_for Store.new do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       <div class="field">
       <%= f.label :name, "Company Name" %>
@@ -17,11 +17,11 @@
           <%= f.label :opening, "Opening Times" %>
           <%= f.text_field :opening %>
 
-          <%= f.label :lat, "Latitude" %>
-          <%= f.text_field :lat %>
+          <%= f.label :latitude, "Latitude" %>
+          <%= f.text_field :latitude %>
 
-          <%= f.label :lng, "Longitude" %>
-          <%= f.text_field :lng %>
+          <%= f.label :longitude, "Longitude" %>
+          <%= f.text_field :longitude %>
 
           <%= f.submit "Save Store Details", class: "btn btn-large btn-danger" %>
         <% end %>

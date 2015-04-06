@@ -5,13 +5,13 @@ class StoresController < ApplicationController
 
     def create
       	 secure_post = params.require(:store).permit(:name, :address, :regno, :vatno,
-      	 												:opening, :lat, :lng)
-         @store = current_user.stores.build(secure_post) 
-        	if @store.save
+      	 												:opening, :latitude, :longitude)
+         @store = current_user.build_store(secure_post) 
+        	if @store.save()
          	  flash[:success] = "Store Details Added!"
           	  redirect_to root_url
        		else
-          	  render 'static_pages/home'
+            render 'static_pages/home'
         	end
       end
 
