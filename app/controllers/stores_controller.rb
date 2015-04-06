@@ -1,7 +1,7 @@
 class StoresController < ApplicationController
 
 	before_filter :signed_in_user, only: [:create, :destroy]
-  before_filter :correct_user,   only: :destroy
+  before_filter :correct_user, only: :destroy
 
     def create
       	 secure_post = params.require(:store).permit(:name, :address, :regno, :vatno,

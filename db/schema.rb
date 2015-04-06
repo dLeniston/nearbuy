@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150327154252) do
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
 
-  create_table "store", force: true do |t|
+  create_table "stores", force: true do |t|
     t.integer  "user_id"
     t.string   "name"
     t.string   "address"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150327154252) do
     t.datetime "updated_at"
   end
 
-  add_index "store", ["user_id"], name: "index_store_on_user_id"
+  add_index "stores", ["user_id"], name: "index_stores_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

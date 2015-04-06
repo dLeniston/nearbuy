@@ -1,7 +1,40 @@
 <% if signed_in? %>
 <div class = "hero-unit">
   <h1>Store Details</h1>
-      <div class="row">
+  <br>
+  <div class="row">   
+  <div class="table-responsive">
+  <table class="table table-hover">
+  <tr>
+    <td>Company Name</td>
+    <td><%= current_user.store.name %></td>   
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td><%= current_user.store.address %></td>   
+  </tr>
+  <tr>
+    <td>Registration No.</td>
+    <td><%= current_user.store.regno %></td>   
+  </tr>
+  <tr>
+    <td>Vat No.</td>
+    <td><%= current_user.store.vatno %></td>
+  </tr>
+  <tr>
+    <td>Opening Times</td>
+    <td><%= current_user.store.opening %></td>
+  </tr>
+    <tr>
+    <td>Latitude</td>
+    <td><%= current_user.store.latitude %></td>
+  </tr>
+    <tr>
+    <td>Longitude</td>
+    <td><%= current_user.store.longitude %></td>
+  </tr>
+</table>
+</div>
         <aside class="span4">
       </div> 
 </div> 
