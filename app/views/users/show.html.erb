@@ -22,9 +22,51 @@
       </div>
     </header>
       <div class="left hero-unit">
+        <% if @user.store.blank? %>
           <section>
             <%= render 'shared/store_form' %>
           </section>
+          <% else %>
+          <div class="table-responsive">
+  <table class="table table-hover">
+  <tr>
+    <td>Company Name</td>
+    <td><%= current_user.store.name %></td>  
+    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td> 
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td><%= current_user.store.address %></td> 
+    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>  
+  </tr>
+  <tr>
+    <td>Registration No.</td>
+    <td><%= current_user.store.regno %></td>   
+    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>
+  </tr>
+  <tr>
+    <td>Vat No.</td>
+    <td><%= current_user.store.vatno %></td>
+    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>
+  </tr>
+  <tr>
+    <td>Opening Times</td>
+    <td><%= current_user.store.opening %></td>
+    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>
+  </tr>
+    <tr>
+    <td>Latitude</td>
+    <td><%= current_user.store.latitude %></td>
+    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>
+  </tr>
+    <tr>
+    <td>Longitude</td>
+    <td><%= current_user.store.longitude %></td>
+    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>
+  </tr>
+</table>
+</div>
+<% end %>
       </div>
     </div> 
   </div>
