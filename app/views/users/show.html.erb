@@ -1,5 +1,5 @@
  <% provide(:title, @user.name) %>
- <div class = "center hero-unit">
+ <div class = "hero-unit">
     <div class="row">
       <aside class="span4">
         <section>
@@ -21,10 +21,9 @@
         </div>
       </div>
     </header>
-      <div class="left hero-unit">
+      <div class="hero-unit">
         <% if @user.store.blank? %>
           <section>
-            <%= render 'shared/error_messages', object: f.object %>
             <%= render 'shared/store_form' %>
           </section>
           <% else %>
