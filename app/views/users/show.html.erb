@@ -30,14 +30,12 @@
   <div class="table-responsive">
   <table class="table table-hover">
   <tr>
-    <td>Company Name</td>
-    <td><%= current_user.store.name %></td>  
-    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td> 
+    <td>Company Name*</td>
+    <td><%= best_in_place current_user.store, :name %></td>  
   </tr>
   <tr>
-    <td>Address</td>
-    <td><%= current_user.store.address %></td> 
-    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>  
+    <td>Address*</td>
+    <td><%= best_in_place current_user.store, :address%></td>  
   </tr>
   <tr>
     <td>Registration No.</td>
@@ -48,21 +46,19 @@
     <td><%= current_user.store.vatno %></td>
   </tr>
   <tr>
-    <td>Opening Times</td>
-    <td><%= current_user.store.opening %></td>
-    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>
+    <td>Opening Times*</td>
+    <td><%= best_in_place current_user.store, :opening %></td>
   </tr>
     <tr>
     <td>Latitude</td>
     <td><%= current_user.store.latitude %></td>
-    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>
   </tr>
     <tr>
     <td>Longitude</td>
     <td><%= current_user.store.longitude %></td>
-    <td><a href="#" class="confirm-delete btn mini red-stripe">Edit</a></td>
   </tr>
 </table>
+<p>*Click on Text you wish to change in these fields, press enter to commit changes. Locational data will be updated on next page load</p>
 </div>
 <% end %>
       </div>
