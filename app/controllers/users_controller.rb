@@ -7,6 +7,7 @@
         @user = User.find(params[:id])
         @microposts = @user.microposts
         @store = @user.store
+        @products = @user.products
       end
 
        def new

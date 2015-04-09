@@ -1,0 +1,18 @@
+<%= form_for(Product.new) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="field">
+      <%= f.label :name, "Product Name" %>
+          <%= f.text_field :name %>
+
+          <%= f.label :description, "Product Description" %>
+          <%= f.text_field :description %>
+          
+          <%= f.label :price, "Product Price" %>
+          <%= f.text_field :price %>
+
+          <%= f.label :stock, "No. in Stock" %>
+          <%= f.text_field :stock %>
+
+          <%= f.submit "Save Product Details", class: "btn btn-large btn-danger" %>
+        <% end %>
+</div>

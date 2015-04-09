@@ -1,0 +1,21 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+  	    <thead>
+        <tr>
+            <th>Product*</th>
+            <th>Description*</th>
+            <th>Price*</th>
+            <th>Stock*</th>
+        </tr>
+    </thead>
+    <tbody>
+  	<% current_user.store.products.each do |products| %>
+  	<tr>
+  		<td><%= best_in_place products, :name %></td>
+ 		<td><%= best_in_place products, :description %></td>
+ 		<td><%= best_in_place products, :price %></td>
+ 		<td><%= best_in_place products, :stock %></td>
+ 	</tr>
+  	<% end %>
+  </tbody>
+</table>

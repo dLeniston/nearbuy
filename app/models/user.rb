@@ -14,7 +14,8 @@
       validates :password, length: { minimum: 6 }, allow_blank: true
       has_many :microposts, dependent: :destroy
       has_one :store, dependent: :destroy
-
+      has_many :products, :through => :store, dependent: :destroy
+       accepts_nested_attributes_for :products
     def feed
        Micropost.where("user_id = ?", id)
     end

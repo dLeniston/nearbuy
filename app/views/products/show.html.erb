@@ -1,0 +1,34 @@
+ <% provide(:title, @user.name) %>
+ <div class = "hero-unit">
+    <div class="row">
+      <aside class="span4">
+      </aside>
+      <header class="navbar navbar-static navbar-default">
+      <div class="navbar-inner">
+        <div class="container">
+         <h1>
+            <%= @user.name %>
+          </h1>
+          <h2>Product Page</h2>
+        </div>
+      </div>
+    </header>
+      <div class="hero-unit">
+        <% if @user.store.products.blank? %>
+          <section>
+            <h2>Please Enter Product Details</h2>
+            <%= render 'shared/product_form' %>
+          </section>
+          <% else %>
+          <h2>Product Entry Form</h2>
+          <%= render 'shared/product_form' %>
+          <br>
+          <h2>Current Product List </h2>
+          <%= render 'products/product' %>
+          <br>
+          <p>*Click on Text you wish to change in these fields, press enter to commit changes. Locational data will be updated on next page load</p>
+</div>
+<% end %>
+      </div>
+    </div> 
+  </div>

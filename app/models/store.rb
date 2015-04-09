@@ -11,6 +11,7 @@ class Store < ActiveRecord::Base
       					length: {in: 5..9}
       validates :vatno, presence: true, uniqueness: true, length: {is: 10}
       validates :opening, presence: true, length: {maximum: 200}
+      has_many :products, dependent: :destroy
       #validates :latitude, presence: true
       #validates :longitude, presence: true
 end
