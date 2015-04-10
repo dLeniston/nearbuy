@@ -15,6 +15,10 @@
  		<td><%= best_in_place products, :description %></td>
  		<td><%= best_in_place products, :price %></td>
  		<td><%= best_in_place products, :stock %></td>
+    <td>
+        <%= link_to "delete", products, method: :delete,
+                                         data: { confirm: "You sure?" },
+                                         title: products.name, class: "btn btn-small btn-delete" %></td>
  	</tr>
   	<% end %>
   </tbody>
