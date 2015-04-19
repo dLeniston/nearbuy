@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Mytwitter::Application.load_tasks
+Nearbuy::Application.load_tasks

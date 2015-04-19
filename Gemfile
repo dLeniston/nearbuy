@@ -38,6 +38,10 @@ gem 'geocoder'
 
 gem 'best_in_place'
 
+#Rename
+
+gem 'rename'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

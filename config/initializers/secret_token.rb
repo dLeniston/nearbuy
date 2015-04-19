@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Mytwitter::Application.config.secret_key_base = 'b307ef9557bfd709134ae03b0bc30403ecabbadbffba6eb6bc81203f3ea4fb474bb5e7a8c7496fd0e2528d3cb911298947233cd4cfe3d8ba0670c0e3cecd4ead'
+Nearbuy::Application.config.secret_key_base = 'b307ef9557bfd709134ae03b0bc30403ecabbadbffba6eb6bc81203f3ea4fb474bb5e7a8c7496fd0e2528d3cb911298947233cd4cfe3d8ba0670c0e3cecd4ead'
